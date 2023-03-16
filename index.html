@@ -96,15 +96,18 @@
     <p> - The input contains a single number N.</p>
     <h4>Output Format</h4>
     <p> - Return the reversed number.</p>
-    <pre> → var Reverse_Number = (N) => 
+    <pre> →var Reverse_Number = (n) => 
         {
-          let result = 0;
-          let number = N;
-        
-        result = Number(String(number).split('').reverse().join(''));
-        
-        return (result);
+            let rev_num = 0
+            
+            while(n>0)
+            {
+              rev_num = rev_num*10 + n%10;
+              n = Math.floor(n/10)
+            }
+            return rev_num
         };
+        
     </pre>
     <hr>
 
@@ -116,7 +119,18 @@
         The second line of input contains the second string S2.</p>
     <h4>Output Format</h4>
     <p> - Return "YES" if S1 is a substring of S2else return "NO".</p>
-    <pre> → 
+    <pre> → var Substring_Check = (S1, S2) => 
+        {
+          let bool = S1.indexOf(S2)
+          if (bool!== -1){
+            return "YES"
+          }
+            else{
+              return "NO"
+            }
+            
+        };
+
     </pre>
     <hr>
 
